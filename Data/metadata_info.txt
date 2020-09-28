@@ -1,0 +1,25 @@
+author
+link
+category
+date of publication
+number of tokens
+number of words without punctuation
+number of types
+number of links inside the news
+number of words in upper case
+number of verbs
+number of subjunctive and imperative verbs
+number of nouns
+number of adjectives
+number of adverbs
+number of modal verbs (mainly auxiliary verbs)
+number of singular first and second personal pronouns
+number of plural first personal pronouns
+number of pronouns
+pausality
+number of characters
+average sentence length
+average word length
+percentage of news with spelling errors
+emotiveness
+diversity
