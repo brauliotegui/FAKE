@@ -1,0 +1,48 @@
+
+
+* {
+  background-color: gray;
+}
+
+
+
+/* star means target ALL elements on the HTML page */
+
+#green-text {
+  color: black;
+}
+
+/* Make all Paragraphs (p tags) red */
+p {
+  color: white;
+}
+
+.red {
+  color:black;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* PRIORITY (LEAST TO GREATEST):
+1. Elements
+2. Class
+3. Id
+*/
+
+.main-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-button-container {
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background-color: #62003C;
+}
