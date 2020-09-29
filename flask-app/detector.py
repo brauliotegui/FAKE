@@ -88,19 +88,6 @@ def predict(new_text):
     ynew = new_article_vecs.todense()
 
     prediction = LRM.predict(ynew)
+    result = prediction[0]
 
-    return prediction[0]
-
-if __name__ == '__main__':
-    # Whatever happens after this line, execute it when running
-    # and DO NOT execute these lines of code if
-    # things from this script are imported from other scripts.
-
-    USER_INPUT = input('Please Enter Some Text: ')
-
-    PREDICTION = predict(USER_INPUT)
-    print('Pronto! Terminamos de revisar este texto:')
-    if PREDICTION == 1:
-        print('Cuidado! Essa noticia tem 92% de chances de ser falsa!')
-    if PREDICTION == 0:
-        print('Essa noticia parece ser verdadeira.')
+    return result

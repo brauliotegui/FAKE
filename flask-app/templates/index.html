@@ -1,81 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
   <meta charset="utf-8">
-  <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="static/css/styles.css">
-  <title>O Detector de Mentiras</title>
+  <title>Detector de Mentiras</title>
+  <link href="static/css/jquery.flexdatalist.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-
   <div class="main-container">
-
-  <!-- The body is what is rendered on screen -->
   <h1>Bem vindo ao Detector de Fake News!</h1>
+  <br>
 
-  <br><form action="/recommendations">
-    <p>Insira o texto o qual gostaria de verificar se a informacao e' verdadeira ou nao:</p>
-    Texto:
-    <br><input type="text" name="movie1" placeholder="Copie e cole o texto ou noticia aqui"><br>
-    <div class="submit-button-container">
-    <!-- <input type="submit" class="actualButton"> -->
-    <button type="button" class="btn btn-primary btn-lg">Verifique!</button>
-    </div> </form>
-<br>
-<br><br><p class="red bold">Clique no link abaixo para obter mais informacoes sobre
-  o detector de fake news, e dicas de como evitar noticias falsas</p><br>
- <a href='https://www.spiced-academy.com'>Go to Spiced!</a>
- <br>
- <a href='/about'>Me mostre o resultado!</a>
+  <form action="/result" method ="POST">   <!-- form tag for user input, action is for the following function-->
+
+    <p>Insira o texto aqui:</p>
+
+    <input type="text" name="user_input" size="50" placeholder="Copie e cole a noticia aqui"
+    class="flexdata"
+    required>
+    <br><br><br>
+    <input type="submit" value = "Verifique essa notícia" class="btn btn-primary">
+  </form>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script></script>
 </div>
+</body>
 
- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
- <script type="text/javascript" src="static/js/script.js">
- </script>
+<script src="static/js/jquery.flexdatalist.min.js"></script>  <!-- has to be outside the html-body -->
+<script type="text/javascript" src="static/js/script.js"></script>
 
- </body>
- </html>
+
+</html>

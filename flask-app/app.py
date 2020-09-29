@@ -1,24 +1,30 @@
+""" web app for the fake news detector.br"""
 from flask import Flask, render_template
 from flask import request
-import detector as dtc #import all objects from detector.py
+import pickle5 as pickle
+import detector as detc #import all objects from detector.py
 
 
 app = Flask(__name__) #tell Flask to make THIS script the center of the application
 
-
-@app.route('/index') #whenever user visits HOSTNAME:PORT/index, this function is triggered
+#whenever user visits HOSTNAME:PORT/index, this function is triggered
+@app.route('/index', methods=['POST', 'GET'])
 @app.route('/')
 def index():
-    return render_template('index.html')
+    user_input = str(request.form)
+    pkl_filename = "tmp.pkl"
+    with open(pkl_filename, 'wb') as file:
+        pickle.dump(user_input, file)
+    print(file)
+    return render_template('index.html', input_html=user_input)
 
-@app.route('/about') #python decorater modifies the function that is defined on the next line.
-def recommender():
-    text = dict(request.args)
-    #THIS WE NEED TO BUILD OURSELVES NOW recommendations = rec.calculate_best_movies(ratings)
-    return render_template('about.html', result_html=text.items())
-    #passing the back-end python variable to the front-end (HTML). i.e. the RESPONSE.
-
-
+#python decorater modifies the function that is defined on the next line.
+@app.route('/result', methods=['GET', 'POST'])
+def detector():
+    with open("tmp.pkl", 'rb') as file:
+        user_input = pickle.load(file)
+    result = detc.predict(user_input)
+    return render_template('result.html', result_html=result)
 
 
 if __name__ == '__main__':
