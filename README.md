@@ -5,14 +5,12 @@ Brazilian Fake News detector: Final Data Science Project at SPICED Academy
 Through the collection of all the news from the database,...
 
 #### Most used words in real news:
- <p align="center">
   <img src="https://github.com/brauliotegui/FAKE/blob/master/images/real_truncatednews_wordcloud.png">
-  </p>
+  
 
 #### Most used words in fake news:
-<p align="center">
   <img src="https://github.com/brauliotegui/FAKE/blob/master/images/fakenews_wordcloud.png">
-  </p>
+
   
  
  ## NLP Model overview
