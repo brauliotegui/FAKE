@@ -30,5 +30,9 @@ Through the collection of all the news from the database,...
       - Specificity: 92.35 %
       - Misclassification Rate: 7.08 %
       
+ #### Cross-Validation:
+ 
+      - cross-validation scores [0.92881944 0.90538194 0.91493056 0.90017361 0.9140625 ]
+      
      
 ## App
