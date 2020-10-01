@@ -1,7 +1,6 @@
 """ web app for the fake news detector.br"""
 from flask import Flask, render_template
 from flask import request
-import pickle5 as pickle
 import detector as detc #import all objects from detector.py
 
 
@@ -11,20 +10,20 @@ app = Flask(__name__) #tell Flask to make THIS script the center of the applicat
 @app.route('/index', methods=['POST', 'GET'])
 @app.route('/')
 def index():
-    user_input = str(request.form)
-    pkl_filename = "tmp.pkl"
-    with open(pkl_filename, 'wb') as file:
-        pickle.dump(user_input, file)
-    print(file)
-    return render_template('index.html', input_html=user_input)
+    #user_input = str(request.form)
+    return render_template('index.html')
 
 #python decorater modifies the function that is defined on the next line.
 @app.route('/result', methods=['GET', 'POST'])
 def detector():
-    with open("tmp.pkl", 'rb') as file:
-        user_input = pickle.load(file)
+    user_input = request.args.get('user_input')
+    print(user_input)
     result = detc.predict(user_input)
-    return render_template('result.html', result_html=result)
+    if result == 1:
+        resposta = 'Cuidado! Esta notícia é provavelmente fake.'
+    elif result == 0:
+        resposta = 'Esta notícia parece verdadeira.'
+    return render_template('result.html', result=resposta)
 
 
 if __name__ == '__main__':

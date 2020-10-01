@@ -17,6 +17,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 140px;
 }
 
 .submit-button {
@@ -32,6 +33,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 120px;
 }
 
 .container {
@@ -46,6 +48,7 @@ p {
 
 h1 {
   color: #660000;
+  margin-top: -50px;
   flex-direction: column;
   justify-content: center;
   align-items: center;

@@ -6,6 +6,12 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 from sklearn.linear_model import LogisticRegression
 
+import pickle
+
+# Load pickled model
+with open("logistic_model.pkl", 'rb') as file:
+    pickle_model = pickle.load(file)
+
 CORPUS = []
 LABEL = []
 
