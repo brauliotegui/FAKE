@@ -1,77 +1,16 @@
 """machine-learning Code that detects Fake News"""
 import os
+import pickle
 import pandas as pd
-
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-from sklearn.linear_model import LogisticRegression
-
-import pickle
 
 # Load pickled model
 with open("logistic_model.pkl", 'rb') as file:
-    pickle_model = pickle.load(file)
-
-CORPUS = []
-LABEL = []
-
-DIR_1 = '../Data/size_normalized_texts/fake/'
-LIST_1 = os.listdir(DIR_1)
-NUMBER_FILES = len(LIST_1)
-
-for i in range(NUMBER_FILES):
-    title = LIST_1[i]
-    LABEL.append(1)
-    with open(DIR_1 + title, 'r') as reader:
-        doc = reader.read()
-        doc.lower()
-        doc.split()
-        CORPUS.append(doc)
-
-DIR_0 = '../Data/size_normalized_texts/true/'
-LIST_0 = os.listdir(DIR_0)
-NUMBER_FILES = len(LIST_0)
-
-for i in range(NUMBER_FILES):
-    title = LIST_0[i]
-    LABEL.append(0)
-    with open(DIR_0 + title, 'r') as reader:
-        doc = reader.read()
-        doc.lower()
-        doc.split()
-        CORPUS.append(doc)
-
-assert len(CORPUS) == len(LABEL)
-
-def vectors_and_df(corpus, label):
-    """
-    creates vectors for articles/news and returns dataframe with news
-    as word vectors indexed by 1(Fake) or 0(Not Fake).
-
-    Parameters
-    ----------
-    corpus : Trained scikit-learn model pipeline.
-    label : str
-
-    Returns
-    ---------
-    dataframe, vectorized corpus
-    """
-
-    cv = TfidfVectorizer()
-    cv.fit(corpus)
-    corpus_vecs = cv.transform(corpus)
-
-    return pd.DataFrame(corpus_vecs.todense(), index=label,
-                        columns=cv.get_feature_names()), cv
-
-DATAFRAME, CV = vectors_and_df(CORPUS, LABEL)
-
-X = DATAFRAME
-Y = DATAFRAME.index
-
-LRM = LogisticRegression(C=2e7, max_iter=300)
-LRM.fit(X, Y)
+    PICKLE_MODEL = pickle.load(file)
+# Load CV fitted
+with open("CVfitted.pkl", 'rb') as file:
+    CV = pickle.load(file)
 
 def predict(new_text):
 
@@ -93,7 +32,7 @@ def predict(new_text):
     new_article_vecs = CV.transform(article)
     ynew = new_article_vecs.todense()
 
-    prediction = LRM.predict(ynew)
+    prediction = PICKLE_MODEL.predict(ynew)
     result = prediction[0]
 
     return result
