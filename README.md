@@ -1,5 +1,7 @@
 # FAKE: A Fake News detector
-Brazilian Fake News detector: Final Data Science Project at SPICED Academy
+Brazilian Fake News detector: Final Data Science Project at SPICED Academy. 
+
+The Presentation for the project can be found [here](https://my.visme.co/view/pvgoqz1e-spiced-final-project).
 
 ## Visual Analysis
 Through the collection of all the news from the database,...
