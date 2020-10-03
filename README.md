@@ -3,6 +3,9 @@ Brazilian Fake News detector: Final Data Science Project at SPICED Academy.
 
 The Presentation for the project can be found [here](https://my.visme.co/view/pvgoqz1e-spiced-final-project).
 
+## Description
+The increase of social media usage has...
+
 ## Visual Analysis
 Through the collection of all the news from the database,...
 
@@ -13,7 +16,14 @@ Through the collection of all the news from the database,...
 #### Most used words in fake news:
   <img src="https://github.com/brauliotegui/FAKE/blob/master/images/fakenews_wordcloud.png">
 
-  
+## Technology and tools used:
+* Python
+* Scikit-learn
+* Pickle
+* Flask
+* Heroku
+* HTML
+* CSS
  
  ## NLP Model overview
  
@@ -38,6 +48,7 @@ Through the collection of all the news from the database,...
       
      
 ## App
+FAKE - the fake news web-application ca be accessed through ___
 
 ## The Data
 The Dataset used was Fake.Br Corpus. I would like to thank Roney Santos and everyone involved in the development of this dataset, which was incredibly well done and saved me a lot of time and work. This project would not have been possible with such outcomes without a nicely collected and cleaned-up data, like the one from Fake.Br Corpus.
