@@ -53,7 +53,7 @@ Through the collection of all texts from the database it was possible to analyze
       
      
 ## App
-FAKE - the fake news web-application ca be accessed through ___
+FAKE - the fake news web-application ca be accessed on https://detectordementiras.herokuapp.com/
 
 ## The Data
 The Dataset used was Fake.Br Corpus. I would like to thank Roney Santos and everyone involved in the development of this dataset, which was incredibly well done and saved me a lot of time and work. This project would not have been possible with such outcomes without a nicely collected and cleaned-up data, like the one from Fake.Br Corpus.
