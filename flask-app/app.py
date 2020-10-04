@@ -25,6 +25,16 @@ def detector():
         resposta = 'Esta notícia parece verdadeira.'
     return render_template('result.html', result=resposta)
 
+@app.route('/about')
+def about():
+    #user_input = str(request.form)
+    return render_template('about.html')
+
+@app.route('/info')
+def info():
+    #user_input = str(request.form)
+    return render_template('info.html')
+
 
 if __name__ == '__main__':
     #whatever occurs after this line is executed when we run "python application.py"

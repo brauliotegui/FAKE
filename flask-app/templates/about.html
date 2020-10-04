@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <title>Sobre o Detector de Mentiras</title>
+      <link href="static/css/jquery.flexdatalist.min.css" rel="stylesheet" type="text/css">
+      <link href="static/jquery.flexdatalist.min.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>Here are your recommended movies:</h1>
-      <br>
-      <ul>
-        {% for m in result_html%}
-        <li>{{ m }}</li>
-        {% endfor %}
-      </ul>
-      <br>
-      <a href='/'>Take me back home!</a>
+    <div class="main-container">
+<h1>Sobre o detector de mentiras/ fake news</h1>
+<br><br><br>
+<p class="large-text">Esse detector de fake news foi elaborado através de um algoritmo
+de Machine Learning. Utiliza-se de um modelo NLP para classificar o texto
+como uma notícia potencialmente falsa, ou verdadeira.
+Este algoritmo foi treinado com o Fake.Br Corpus -- um dataset com 7.200 notícias,
+onde metade é falsa. Esse procedimento foi feito de maneira manual para garantir
+maior precisão possível.</p>
 
-  </body>
+<p class="large-text">A precisão do algoritmo do detector é de 92.84 %.
+  <li>Accuracy: 92.85 %</li>
+  <li>Precision: 92.19 %</li>
+  <li>Recall: 93.36 %</li>
+  <li>Specificity: 92.35 %</li>
+  <li>Misclassification Rate: 7.08 %</li><br>
+  Mais informações podem serem encontradas no<a href="https://github.com/brauliotegui/FAKE">repositório github</a>
+</p><br>
+
+<a href='/index'>Volte à página inicial</a>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script></script>
+  </div></body>
 </html>

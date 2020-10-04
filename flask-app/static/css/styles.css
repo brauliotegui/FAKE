@@ -20,6 +20,24 @@ p {
   margin-left: 140px;
 }
 
+ul {
+  color: #1E3052;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 170px;
+  margin-right:170px;
+}
+
+.large-text {
+  color: #1E3052;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 170px;
+  margin-right:170px;
+}
+
 .submit-button {
   margin-top: 50px;
   flex-direction: column;
