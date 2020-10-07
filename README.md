@@ -4,7 +4,7 @@
 
 ## web app
 FAKE - the fake news detector web-application, can be accessed on https://detectordementiras.herokuapp.com/
-<img src="https://github.com/brauliotegui/FAKE/blob/master/images/Screenshot%20.png" width="85%" height="85%">
+<img src="https://github.com/brauliotegui/FAKE/blob/master/images/Screenshot%20.png">
 
 ## Description
 The increase of social media usage has led to a more interconnected society, but has also led to problems never faced by our society before. One of these problems is the fast spread of misinformation -- fake news, as it is popularly referred to. I believe the massive spread of fake news to be one of most urgent problems we should tackle as a global and interconnected society right now, and this is why I chose to develop this Fake News detector as my final project during a Data Science bootcamp. 
